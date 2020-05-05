@@ -41,7 +41,8 @@
     <script src="https://js.arcgis.com/4.15/"></script>
 
     <script>
-      require(["esri/Map", "esri/views/MapView"], function(Map, MapView) {
+      require(["esri/Map", "esri/views/MapView", "esri/widgets/BasemapToggle",
+      "esri/widgets/BasemapGallery"], function(Map, MapView, BasemapToggle, BasemapGallery) {
         var map = new Map({
           basemap: "streets-navigation-vector"
         });
@@ -52,6 +53,19 @@
           zoom: 12,
           center: [104.756554, -2.990934] // longitude, latitude	104.756554 -2.990934	
         });
+        
+        var basemapGallery = new BasemapGallery({
+        view: view,
+        source: {
+          portal: {
+            url: "http://www.arcgis.com",
+            useVectorBasemaps: true, // Load vector tile basemap group
+          },
+        } 
+      });
+
+      view.ui.add(basemapGallery, "top-right"); // Add to the view
+        
       });
     </script>
 
