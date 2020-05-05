@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Covid-19 Sumsel</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="java.js"></script>
+
+
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <!--
+  ArcGIS API for JavaScript, https://js.arcgis.com
+  For more information about the intro-mapview sample, read the original sample description at developers.arcgis.com.
+  https://developers.arcgis.com/javascript/latest/sample-code/intro-mapview/index.html
+  -->
+<!-- <title>Intro to MapView - Create a 2D map - 4.15</title> -->
+    <style>
+      html,
+      body,
+      #viewDiv {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://js.arcgis.com/4.15/esri/themes/light/main.css"
+    />
+    <script src="https://js.arcgis.com/4.15/"></script>
+
+    <script>
+      require(["esri/Map", "esri/views/MapView"], function(Map, MapView) {
+        var map = new Map({
+          basemap: "streets-navigation-vector"
+        });
+
+        var view = new MapView({
+          container: "viewDiv",
+          map: map,
+          zoom: 12,
+          center: [104.756554, -2.990934] // longitude, latitude	104.756554 -2.990934	
+        });
+      });
+    </script>
+
+
+
+  </head>
+  <body>
+    <div class="header">
+      <img class="header-logo" src="geonet.png">
+      <div class="header-list">
+        <ul>
+          <li class="list"><a href="#"> Home</a></li>
+
+          <li class="list"><a href="#data"> Data</a></li>
+          
+          <li class="list"><a href="#peta"> Peta</a></li>
+        </ul>
+          
+      </div>
+    </div>
+
+    <!-- INI BAGIAN UTAMA -->
+    <div class="top-wrapper">
+      <div class="container">
+        <h1>PT. GEONET INFOMEDIA</h1>
+        <h1>SELAMAT DATANG DI WEB SEBARAN COVID-19 DI SUMSEL</h1>
+      </div>
+    </div>
+
+    <!-- INI BAGIAN EXTRA 1 -->
+    <div class="lesson-wrapper">
+      <div class="container">
+        <div class="heading" id="data">
+          <h2>DATA SEBARAN COVID-19 </h2>
+        </div>
+        <div class="lessons">
+
+  <!-- 1.ZEN -->
+          <div class="lesson satu">
+            <div class="lesson-icon">
+              <img src="biru.jpg"width="200" height="200">
+               <p class="p1">ODP</p>
+               <p class="nilai">4168</p>
+            </div>
+            
+          </div>
+
+
+  
+          <div class="lesson satu">
+            <div class="lesson-icon">
+              <img src="kuning.jpg"width="200" height="200">
+              <p class="p1">PDP</p>
+              <p class="nilai">243</p>
+            </div>
+           
+          </div>
+
+
+   
+          <div class="lesson satu">
+            <div class="lesson-icon">
+              <img src="merah.jpg"width="200" height="200">
+              <p class="p1">POSITIF</p>
+              <p class="nilai">185</p>
+            </div>
+           
+          </div>
+
+
+    
+          <div class="lesson satu">
+            <div class="lesson-icon">
+              <img src="hijau.jpg"width="200" height="200">
+              <p class="p1">SEMBUH</p>
+              <p class="nilai">43</p>
+            </div>
+           
+          </div>
+         
+
+    
+          <div class="lesson duo">
+            <div class="lesson-icon">
+              <img src="hitam.jpg" width="200" height="200" >
+               <p class="p1">MENINGGAL</p>
+               <p class="nilai">5</p>
+            </div>
+            
+          </div>
+        
+        
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+    <!--INI BAGIAN EXTRA 2-->
+    <div class="kepala-extra" id="peta">
+      <h2 class="extra-dua">PETA SEBARAN COVID-19 DI SUMSEL</h2>
+    </div>
+    <div id="viewDiv"></div>
+    </div>
+    <!--INI BAGIAN FOOTER-->
+    <footer>
+      <div class="footer-left">
+        <img src="geonet.png">
+        <p>All Right Reserved ©2020 || Web development by Zen</p>
+    </footer>
+  </body>
+</html>
