@@ -44,10 +44,9 @@ a:hover {
   color: white;
   float: right;
   font-size: 25px;
-  padding-top:37px;
-  padding-left:40px;
-  padding-right:20px;
-
+  padding: 21px 0;
+  display: none;
+  
 .header-logo {
   width: 130px;
   height: 100px;
