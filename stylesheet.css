@@ -44,9 +44,9 @@ a:hover {
   color: white;
   float: right;
   font-size: 25px;
-  padding: 21px 0; }
-  /* Gantikan property display ke none */
-  display: none;
+  padding-top:37px;
+  padding-left:40px;
+  padding-right:20px;
 
 .header-logo {
   width: 130px;
