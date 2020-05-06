@@ -41,8 +41,7 @@
     <script src="https://js.arcgis.com/4.15/"></script>
 
     <script>
-      require(["esri/Map", "esri/views/MapView", "esri/widgets/BasemapToggle",
-      "esri/widgets/BasemapGallery"], function(Map, MapView, BasemapToggle, BasemapGallery) {
+      require(["esri/Map", "esri/views/MapView", "esri/layers/FeatureLayer"], function(Map, MapView, FeatureLayer) {
         var map = new Map({
           basemap: "streets-navigation-vector"
         });
@@ -54,19 +53,29 @@
           center: [104.756554, -2.990934] // longitude, latitude	104.756554 -2.990934	
         });
         
-        var basemapGallery = new BasemapGallery({
-        view: view,
-        source: {
-          portal: {
-            url: "https://enterprise.gisportal.id/server/rest/services/Test/Test_Zen/FeatureServer/0",
-            useVectorBasemaps: true, // Load vector tile basemap group
-          },
-        } 
+        // Trailheads feature layer (points)
+      var trailheadsLayer = new FeatureLayer({
+        url: "https://enterprise.gisportal.id/server/rest/services/Test/Test_Zen/FeatureServer/0"
       });
 
-      view.ui.add(basemapGallery, "top-right"); // Add to the view
-        
+      map.add(trailheadsLayer);
+      
+      // Trails feature layer (lines)
+      var trailsLayer = new FeatureLayer({
+        url: "https://enterprise.gisportal.id/server/rest/services/Test/Test_Zen/FeatureServer/0"
       });
+
+      map.add(trailsLayer, 0);
+
+      // Parks and open spaces (polygons)
+      var parksLayer = new FeatureLayer({
+        url: "https://enterprise.gisportal.id/server/rest/services/Test/Test_Zen/FeatureServer/0"
+      });
+
+      map.add(parksLayer, 0);
+
+    });
+      
     </script>
 
 
